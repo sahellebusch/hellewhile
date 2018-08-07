@@ -1,5 +1,5 @@
 /**
- * Module to flatten and unflatten objects.
+ *An awesome while loop implementation for promises.
  *
  * @module hellewhile
  */
