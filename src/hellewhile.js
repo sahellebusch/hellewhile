@@ -11,12 +11,12 @@
  * @param {Object} [context=null] - optional context object to be passed into the asyncFn and predicate functions.
  * @param {String} [tracker=null] - optional property to be set on the context object that will store the results of each individual asyncFn call.
  */
-export default function hellewhile(
+export const hellewhile = (
   asyncFn,
   predicate,
   context = null,
   tracker = null
-) {
+) => {
   if (context && tracker && !context[tracker]) {
     context = Object.assign({}, context, { [tracker]: [] });
   }
@@ -30,6 +30,6 @@ export default function hellewhile(
       ? Promise.resolve(context)
       : hellewhile(asyncFn, predicate, context, tracker);
   });
-}
+};
 
-// export default hellewhile;
+export default hellewhile;
