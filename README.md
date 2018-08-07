@@ -1,84 +1,47 @@
-# Flattenizer
-Functions to flatten and unflatten nested JavaScript objects into a single level.  Keys are enumerated if they collide.
+#  Hellewhile
+An awesome while loop implementation for promises.
 
-[![NPM](https://nodei.co/npm/flattenizer.png)](https://npmjs.org/package/flattenizer)
+[![NPM](https://nodei.co/npm/hellewhile.png)](https://npmjs.org/package/hellewhile)
 
-[![build status](https://api.travis-ci.org/sahellebusch/flattenizer.png?branch=master)](http://travis-ci.org/sahellebusch/flattenizer)
-[![npm version](https://badge.fury.io/js/flattenizer.svg)](https://badge.fury.io/js/flattenizer)
+![Travis (.org)](https://img.shields.io/travis/sahellebusch/hellewhile.svg)
+![npm](https://img.shields.io/npm/v/hellewhile.svg)
 
 
 ### Usage
 
-Flattenizer is a UMD module, therefore is compatible with both AMD and CommonJS:
+Hellewhile is a UMD module, therefore is compatible with both AMD and CommonJS:
+
 ```javascript
-import * as flattenizer from 'flattenizer';
-import { flatten, unflatten } from 'flattenizer';
-const flattenizer = require('flattenizer');
+import hellewhile from 'hellewhile';
+const { hellewhile } = require('hellewhile');
 ```
 
 ### Example Usage
-```
-> const flattenizer = require('flattenizer');
-> 
-> let unflattened = {
-    name: 'Sean',
-    city: 'Kansas City',
-    favBreweries: [
-        {
-            name: 'Double Shift',
-            favBeer: 'Sister Abbey'
-        },
-        {
-            name: 'KC Bier Co',
-            favBeer: 'Helles'
-        }
-    ]
-};
->
-> let flattened = flattenizer.flatten(unflattened)
-  { name: 'Sean',
-    city: 'Kansas City',
-    'favBreweries.0.name': 'Double Shift',
-    'favBreweries.0.favBeer': 'Sister Abbey',
-    'favBreweries.1.name': 'KC Bier Co',
-    'favBreweries.1.favBeer': 'Helles' }
->
-> flattenizer.unflatten(flattened)
-  { name: 'Sean',
-    city: 'Kansas City',
-    favBreweries:
-     [ { name: 'Double Shift', favBeer: 'Sister Abbey' },
-       { name: 'KC Bier Co', favBeer: 'Helles' } ] }
-```
+See tests!
 
 ### API
 
 ##### flatten(unflattened)
 ```javascript
-/**
- * Flattens an object.
- *
- * @memberOf module:Flattenizer
- * @function
- * @param {Object} unflattened     - the object to flatten
- * @param {String} [delimiter='.'] - the delimiter to be used when flattening the object
- * @returns {Object}               - the flattened object, empty if provided object is undefined
- * @throws {TypeError}             - if object passed in is not an object or if the delimiter is not a string
- * @public
- */
-``` 
 
-##### unflatten(flattened)
-```javascript
-/**
- * Unflattens an object with compressed keys.
- *
- * @memberOf module:Flattenizer
- * @function
- * @param {Object} flattened       - object to unflatten
- * @param {String} [delimiter='.'] - the delimiter to be used when unflattening the object
- * @returns {Object}               - the unflattened object, empty if provided object is undefined
- * @throws {TypeError}             - if object passed in is not an object or if the delimiter is not a string
- * @public
- */
-```
+<a name="module_hellewhile"></a>
+
+## hellewhile
+An awesome while loop implementation for promises.
+
+<a name="module_hellewhile.hellewhile"></a>
+
+### hellewhile.hellewhile(asyncFn, predicate, [context], [tracker])
+While loop implementation for an asynchronous function.
+
+**Kind**: static method of [<code>hellewhile</code>](#module_hellewhile)  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| asyncFn | <code>function</code> |  | the asynchronous function run with the context object. |
+| predicate | <code>function</code> |  | the predicate function to be used as the while loop conditional.  Provided the asyncFn results and context object. |
+| [context] | <code>Object</code> | <code></code> | optional context object to be passed into the asyncFn and predicate functions. |
+| [tracker] | <code>String</code> | <code></code> | optional property to be set on the context object that will store the results of each individual asyncFn call. |
+
+
+
