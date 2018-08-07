@@ -1,1 +1,1 @@
-module.exports = require('./lib/hellewhile.js').hellewhle;
+module.exports = exports['default'];
