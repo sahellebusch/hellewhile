@@ -2,7 +2,7 @@
   "name": "hellewhile",
   "description": "An awesome while loop implementation for promises.",
   "homepage": "https://github.com/sahellebusch/hellewhile#readme",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "./lib/hellewhile.js",
   "author": {
     "email": "sahellebusch@gmail.com",
