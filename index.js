@@ -1,1 +1,1 @@
-module.exports = require('./lib/hellewhile.js');
+module.exports = require('./lib/hellewhile.js').hellewhile;
