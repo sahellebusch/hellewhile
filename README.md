@@ -1,5 +1,5 @@
 #  Hellewhile
-An awesome while loop implementation for promises.
+A *helle*-awesome while loop implementation for promises.
 
 [![NPM](https://nodei.co/npm/hellewhile.png)](https://npmjs.org/package/hellewhile)
 
